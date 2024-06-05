@@ -1,0 +1,13 @@
+{
+    "__comment1__": "HOME PAGE",
+    "profile": "Profile",
+    "my-account": "My Account",
+    "sign-out": "Sign out",
+    "task-name": "Task Name",
+    "task-action":"Task Action",
+    "status-view":"Status View",
+    "create-task":"Create Task",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View"
+}

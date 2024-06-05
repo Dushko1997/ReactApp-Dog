@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import AdminSidebar from './app/layout/AdminSidebar';
+import ModalContainer from './app/layout/ModalContainer';
+import MainPage from './features/MainPage';
+import FavoritesPage from './features/FavoritesPage';
+import DogDetails from './features/DogDetails';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ToastContainer position="bottom-right" hideProgressBar />
+      <ModalContainer />
+      <Routes>
+        <Route path="/" element={<AdminSidebar />}>
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          <Route path='/mainPage' element={<MainPage />} />
+          <Route path='/favoritesPage' element={<FavoritesPage />} />
+          <Route path='/dogDetails/:id' element={<DogDetails/>} />
+
+        </Route>
+      </Routes>
+    </>
   );
 }
 
